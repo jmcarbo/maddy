@@ -30,4 +30,4 @@ jobs:
         run: echo ${{ steps.buildx.outputs.platforms }}
       - 
         name: Build docker images
-        run: docker buildx build --push --platform linux/amd64,linux/arm64 -t jmcarbo/maddy:0.4.6 .
+        run: docker buildx build --push --platform linux/amd64,linux/arm64 -t jmcarbo/maddy:0.4.3 .
