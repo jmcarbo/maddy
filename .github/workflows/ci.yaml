@@ -2,6 +2,8 @@ name: ci
 
 on:
   push:
+    tags:
+      - '*'
 
 jobs:
   buildx:
@@ -25,9 +27,9 @@ jobs:
         name: Set up Docker Buildx
         id: buildx
         uses: docker/setup-buildx-action@v1
-      -
-        name: Available platforms
-        run: echo ${{ steps.buildx.outputs.platforms }}
+      - name: Get the version
+        id: get_version
+        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
       - 
         name: Build docker images
-        run: docker buildx build --push --platform linux/amd64,linux/arm64 -t jmcarbo/maddy:0.4.3 .
+        run: docker buildx build --push --platform linux/amd64,linux/arm64 -t jmcarbo/maddy:${{ steps.get_version.outputs.VERSION }} .

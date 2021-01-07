@@ -23,6 +23,7 @@ import (
 	"crypto/tls"
 	"errors"
 	"os"
+	"runtime/debug"
 	"time"
 
 	"github.com/foxcpp/go-mtasts"
@@ -108,6 +109,15 @@ func (c *mtastsPolicy) StartUpdater() {
 }
 
 func (c *mtastsPolicy) updater() {
+	defer func() {
+		if err := recover(); err != nil {
+			stack := debug.Stack()
+			log.Printf("panic during MTA-STS update: %v\n%s", err, stack)
+			log.Printf("MTA-STS cache refresh disabled due to critical error")
+			c.updaterStop = nil
+		}
+	}()
+
 	// Always update cache on start-up since we may have been down for some
 	// time.
 	c.log.Debugln("updating MTA-STS cache...")
@@ -467,7 +477,30 @@ func (c *daneDelivery) PrepareConn(ctx context.Context, mx string) {
 	c.tlsaFut = future.New()
 
 	go func() {
-		c.tlsaFut.Set(c.discoverTLSA(ctx, dns.FQDN(mx)))
+		defer func() {
+			if err := recover(); err != nil {
+				stack := debug.Stack()
+				log.Printf("panic during extended resolver lookup: %v\n%s", err, stack)
+			}
+		}()
+
+		ad, recs, err := c.c.extResolver.AuthLookupTLSA(ctx, "25", "tcp", mx)
+		if err != nil {
+			c.tlsaFut.Set([]dns.TLSA{}, err)
+			return
+		}
+		if !ad {
+			// Per https://tools.ietf.org/html/rfc7672#section-2.2 we interpret
+			// a non-authenticated RRset just like an empty RRset. Side note:
+			// "bogus" signatures are expected to be caught by the upstream
+			// resolver.
+			c.tlsaFut.Set([]dns.TLSA{}, err)
+			return
+		}
+
+		// recs can be empty indicating absence of records.
+
+		c.tlsaFut.Set(recs, err)
 	}()
 }
 
