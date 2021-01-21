@@ -34,11 +34,11 @@ type SQL struct {
 	instName string
 
 	db     *sql.DB
-	lookup *sql.Stmt
-	add    *sql.Stmt
-	list   *sql.Stmt
-	set    *sql.Stmt
-	del    *sql.Stmt
+	lookup *sql.NamedStmt
+	add    *sql.NamedStmt
+	list   *sql.NamedStmt
+	set    *sql.NamedStmt
+	del    *sql.NamedStmt
 }
 
 func NewSQL(modName, instName string, _, _ []string) (module.Module, error) {
@@ -94,30 +94,30 @@ func (s *SQL) Init(cfg *config.Map) error {
 		}
 	}
 
-	s.lookup, err = db.Prepare(lookupQuery)
+	s.lookup, err = db.PrepareNamed(lookupQuery)
 	if err != nil {
 		return config.NodeErr(cfg.Block, "failed to prepare lookup query: %v", err)
 	}
 	if addQuery != "" {
-		s.add, err = db.Prepare(addQuery)
+		s.add, err = db.PrepareNamed(addQuery)
 		if err != nil {
 			return config.NodeErr(cfg.Block, "failed to prepare add query: %v", err)
 		}
 	}
 	if listQuery != "" {
-		s.list, err = db.Prepare(listQuery)
+		s.list, err = db.PrepareNamed(listQuery)
 		if err != nil {
 			return config.NodeErr(cfg.Block, "failed to prepare list query: %v", err)
 		}
 	}
 	if setQuery != "" {
-		s.set, err = db.Prepare(setQuery)
+		s.set, err = db.PrepareNamed(setQuery)
 		if err != nil {
 			return config.NodeErr(cfg.Block, "failed to prepare set query: %v", err)
 		}
 	}
 	if removeQuery != "" {
-		s.del, err = db.Prepare(removeQuery)
+		s.del, err = db.PrepareNamed(removeQuery)
 		if err != nil {
 			return config.NodeErr(cfg.Block, "failed to prepare del query: %v", err)
 		}
@@ -135,10 +135,14 @@ func (s *SQL) Lookup(val string) (string, bool, error) {
 	var repl string
 	row := s.lookup.QueryRow(val)
 	if err := row.Scan(&repl); err != nil {
+	  return "", false, nil
+    /*
+    TODO: check error other than no rows
 		if err == sql.ErrNoRows {
 			return "", false, nil
 		}
 		return "", false, fmt.Errorf("%s: lookup %s: %w", s.modName, val, err)
+    */
 	}
 	return repl, true, nil
 }
@@ -148,7 +152,7 @@ func (s *SQL) Keys() ([]string, error) {
 		return nil, fmt.Errorf("%s: table is not mutable (no 'list' query)", s.modName)
 	}
 
-	rows, err := s.list.Query()
+	rows, err := s.list.Query(map[string]interface{}{})
 	if err != nil {
 		return nil, fmt.Errorf("%s: list: %w", s.modName, err)
 	}
@@ -169,7 +173,7 @@ func (s *SQL) RemoveKey(k string) error {
 		return fmt.Errorf("%s: table is not mutable (no 'del' query)", s.modName)
 	}
 
-	_, err := s.del.NamedExec(sql.Named("key", k))
+  _, err := s.del.Exec(map[string]interface{}{"key": k })
 	if err != nil {
 		return fmt.Errorf("%s: del %s: %w", s.modName, k, err)
 	}
@@ -183,9 +187,8 @@ func (s *SQL) SetKey(k, v string) error {
 	if s.add == nil {
 		return fmt.Errorf("%s: table is not mutable (no 'add' query)", s.modName)
 	}
-
-	if _, err := s.add.NamedExec(sql.Named("key", k), sql.Named("value", v)); err != nil {
-		if _, err := s.set.NamedExec(sql.Named("key", k), sql.Named("value", v)); err != nil {
+  if _, err := s.add.Exec(map[string]interface{}{"key": k, "value": v}); err != nil {
+    if _, err := s.set.Exec(map[string]interface{}{"key": k, "value": v}); err != nil {
 			return fmt.Errorf("%s: add %s: %w", s.modName, k, err)
 		}
 		return nil
