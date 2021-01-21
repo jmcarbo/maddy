@@ -93,11 +93,14 @@ func (m *Modifier) loadOrGenerateKey(keyPath, newKeyAlgo string) (pkey crypto.Si
 }
 
 func (m *Modifier) generateAndWrite(keyPath, newKeyAlgo string) (crypto.Signer, error) {
+	m.log.Printf("generating a new %s keypair...", newKeyAlgo)
+  return GenerateAndWrite(keyPath, newKeyAlgo)
+}
+
+func GenerateAndWrite(keyPath, newKeyAlgo string) (crypto.Signer, error) {
 	wrapErr := func(err error) error {
 		return fmt.Errorf("modify.dkim: generate %s: %w", keyPath, err)
 	}
-
-	m.log.Printf("generating a new %s keypair...", newKeyAlgo)
 
 	var (
 		pkey     crypto.Signer

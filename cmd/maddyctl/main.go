@@ -691,6 +691,22 @@ func main() {
 				},
 			},
 		},
+		{
+			Name:   "dkim",
+			Usage:  "Generate dkim key pair",
+			Action: dkimCommand,
+			Flags: []cli.Flag{
+				cli.StringFlag{
+					Name:  "keypath,p",
+					Usage: "Path to store keypair",
+				},
+				cli.StringFlag{
+					Name:  "algorithm,a",
+          Usage: "Use specified dkim algorithm: rsa4096, rsa4096, ed25519. Default: ed25519",
+					Value: "ed25519",
+				},
+			},
+		},
 	}
 
 	if err := app.Run(os.Args); err != nil {
