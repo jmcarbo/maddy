@@ -698,12 +698,12 @@ func main() {
 			Flags: []cli.Flag{
 				cli.StringFlag{
 					Name:  "keypath,p",
-					Usage: "Path to store keypair",
+					Usage: "Path and name to store keypair",
 				},
 				cli.StringFlag{
 					Name:  "algorithm,a",
-          Usage: "Use specified dkim algorithm: rsa4096, rsa4096, ed25519. Default: ed25519",
-					Value: "ed25519",
+          Usage: "Use specified dkim algorithm: rsa4096, rsa2048, ed25519. Default: rsa2048",
+					Value: "rsa2048",
 				},
 			},
 		},
