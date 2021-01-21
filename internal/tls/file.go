@@ -26,10 +26,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/foxcpp/maddy/framework/config"
-	"github.com/foxcpp/maddy/framework/hooks"
-	"github.com/foxcpp/maddy/framework/log"
-	"github.com/foxcpp/maddy/framework/module"
+	"github.com/jmcarbo/maddy/framework/config"
+	"github.com/jmcarbo/maddy/framework/hooks"
+	"github.com/jmcarbo/maddy/framework/log"
+	"github.com/jmcarbo/maddy/framework/module"
 )
 
 type FileLoader struct {

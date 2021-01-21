@@ -24,7 +24,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/foxcpp/maddy/tests"
+	"github.com/jmcarbo/maddy/tests"
 )
 
 func TestSMTPEndpoint_FileBuffer(tt *testing.T) {

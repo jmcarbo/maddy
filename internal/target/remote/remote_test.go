@@ -33,14 +33,14 @@ import (
 	"github.com/emersion/go-smtp"
 	"github.com/foxcpp/go-mockdns"
 	"github.com/foxcpp/go-mtasts"
-	"github.com/foxcpp/maddy/framework/buffer"
-	"github.com/foxcpp/maddy/framework/config"
-	"github.com/foxcpp/maddy/framework/dns"
-	"github.com/foxcpp/maddy/framework/exterrors"
-	"github.com/foxcpp/maddy/framework/module"
-	"github.com/foxcpp/maddy/internal/limits"
-	"github.com/foxcpp/maddy/internal/smtpconn/pool"
-	"github.com/foxcpp/maddy/internal/testutils"
+	"github.com/jmcarbo/maddy/framework/buffer"
+	"github.com/jmcarbo/maddy/framework/config"
+	"github.com/jmcarbo/maddy/framework/dns"
+	"github.com/jmcarbo/maddy/framework/exterrors"
+	"github.com/jmcarbo/maddy/framework/module"
+	"github.com/jmcarbo/maddy/internal/limits"
+	"github.com/jmcarbo/maddy/internal/smtpconn/pool"
+	"github.com/jmcarbo/maddy/internal/testutils"
 )
 
 // .invalid TLD is used here to make sure if there is something wrong about

@@ -23,7 +23,7 @@ package tests_test
 import (
 	"testing"
 
-	"github.com/foxcpp/maddy/tests"
+	"github.com/jmcarbo/maddy/tests"
 )
 
 func TestBasic(tt *testing.T) {

@@ -24,7 +24,7 @@ import (
 	"io"
 
 	"github.com/emersion/go-smtp"
-	"github.com/foxcpp/maddy/framework/future"
+	"github.com/jmcarbo/maddy/framework/future"
 )
 
 // ConnState structure holds the state information of the protocol used to

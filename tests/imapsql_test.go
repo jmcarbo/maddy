@@ -24,7 +24,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/foxcpp/maddy/tests"
+	"github.com/jmcarbo/maddy/tests"
 )
 
 // Smoke test to ensure message delivery is handled correctly.

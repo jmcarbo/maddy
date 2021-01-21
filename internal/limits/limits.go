@@ -32,9 +32,9 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/foxcpp/maddy/framework/config"
-	"github.com/foxcpp/maddy/framework/module"
-	"github.com/foxcpp/maddy/internal/limits/limiters"
+	"github.com/jmcarbo/maddy/framework/config"
+	"github.com/jmcarbo/maddy/framework/module"
+	"github.com/jmcarbo/maddy/internal/limits/limiters"
 )
 
 type Group struct {

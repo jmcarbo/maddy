@@ -17,7 +17,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
 // Package imapsql implements SQL-based storage module
-// using go-imap-sql library (github.com/foxcpp/go-imap-sql).
+// using go-imap-sql library (github.com/jmcarbo/go-imap-sql).
 //
 // Interfaces implemented:
 // - module.StorageBackend
@@ -39,13 +39,13 @@ import (
 	"github.com/emersion/go-imap"
 	sortthread "github.com/emersion/go-imap-sortthread"
 	"github.com/emersion/go-imap/backend"
-	imapsql "github.com/foxcpp/go-imap-sql"
-	"github.com/foxcpp/maddy/framework/config"
-	modconfig "github.com/foxcpp/maddy/framework/config/module"
-	"github.com/foxcpp/maddy/framework/dns"
-	"github.com/foxcpp/maddy/framework/log"
-	"github.com/foxcpp/maddy/framework/module"
-	"github.com/foxcpp/maddy/internal/updatepipe"
+	imapsql "github.com/jmcarbo/go-imap-sql"
+	"github.com/jmcarbo/maddy/framework/config"
+	modconfig "github.com/jmcarbo/maddy/framework/config/module"
+	"github.com/jmcarbo/maddy/framework/dns"
+	"github.com/jmcarbo/maddy/framework/log"
+	"github.com/jmcarbo/maddy/framework/module"
+	"github.com/jmcarbo/maddy/internal/updatepipe"
 
 	_ "github.com/go-sql-driver/mysql"
 	_ "github.com/lib/pq"

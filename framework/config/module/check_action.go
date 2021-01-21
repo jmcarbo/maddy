@@ -24,9 +24,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/foxcpp/maddy/framework/config"
-	"github.com/foxcpp/maddy/framework/exterrors"
-	"github.com/foxcpp/maddy/framework/module"
+	"github.com/jmcarbo/maddy/framework/config"
+	"github.com/jmcarbo/maddy/framework/exterrors"
+	"github.com/jmcarbo/maddy/framework/module"
 )
 
 // FailAction specifies actions that messages pipeline should take based on the

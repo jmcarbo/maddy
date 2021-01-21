@@ -28,12 +28,12 @@ import (
 
 	"github.com/emersion/go-message/textproto"
 	"github.com/emersion/go-milter"
-	"github.com/foxcpp/maddy/framework/buffer"
-	"github.com/foxcpp/maddy/framework/config"
-	"github.com/foxcpp/maddy/framework/exterrors"
-	"github.com/foxcpp/maddy/framework/log"
-	"github.com/foxcpp/maddy/framework/module"
-	"github.com/foxcpp/maddy/internal/target"
+	"github.com/jmcarbo/maddy/framework/buffer"
+	"github.com/jmcarbo/maddy/framework/config"
+	"github.com/jmcarbo/maddy/framework/exterrors"
+	"github.com/jmcarbo/maddy/framework/log"
+	"github.com/jmcarbo/maddy/framework/module"
+	"github.com/jmcarbo/maddy/internal/target"
 )
 
 const modName = "check.milter"

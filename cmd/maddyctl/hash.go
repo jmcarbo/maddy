@@ -24,8 +24,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/foxcpp/maddy/cmd/maddyctl/clitools"
-	"github.com/foxcpp/maddy/internal/auth/pass_table"
+	"github.com/jmcarbo/maddy/cmd/maddyctl/clitools"
+	"github.com/jmcarbo/maddy/internal/auth/pass_table"
 	"github.com/urfave/cli"
 	"golang.org/x/crypto/bcrypt"
 )

@@ -117,16 +117,16 @@ build() {
 		# using only POSIX sh features (and even with Bash extensions I can't figure it out).
 		go build -trimpath \
 			-buildmode pie -tags 'osusergo netgo static_build' -ldflags '-extldflags="-fnoPIC -static"' \
-			-ldflags="-X \"github.com/foxcpp/maddy.Version=${version}\"" -o "${builddir}/maddy" ${GOFLAGS} ./cmd/maddy
+			-ldflags="-X \"github.com/jmcarbo/maddy.Version=${version}\"" -o "${builddir}/maddy" ${GOFLAGS} ./cmd/maddy
 		echo "-- Building management utility (maddyctl)..." >&2
 		go build -trimpath \
 			-buildmode pie -tags 'osusergo netgo static_build' -ldflags '-extldflags="-fnoPIC -static"' \
-			-ldflags="-X \"github.com/foxcpp/maddy.Version=${version}\"" -o "${builddir}/maddyctl" ${GOFLAGS} ./cmd/maddyctl
+			-ldflags="-X \"github.com/jmcarbo/maddy.Version=${version}\"" -o "${builddir}/maddyctl" ${GOFLAGS} ./cmd/maddyctl
 	else
 		echo "-- Building main server executable..." >&2
-		go build -trimpath -ldflags="-X \"github.com/foxcpp/maddy.Version=${version}\"" -o "${builddir}/maddy" ${GOFLAGS} ./cmd/maddy
+		go build -trimpath -ldflags="-X \"github.com/jmcarbo/maddy.Version=${version}\"" -o "${builddir}/maddy" ${GOFLAGS} ./cmd/maddy
 		echo "-- Building management utility (maddyctl)..." >&2
-		go build -trimpath -ldflags="-X \"github.com/foxcpp/maddy.Version=${version}\"" -o "${builddir}/maddyctl" ${GOFLAGS} ./cmd/maddyctl
+		go build -trimpath -ldflags="-X \"github.com/jmcarbo/maddy.Version=${version}\"" -o "${builddir}/maddyctl" ${GOFLAGS} ./cmd/maddyctl
 	fi
 
 	build_man_pages

@@ -30,7 +30,7 @@ Your options are:
 
 * Pre-built tarball (Linux, amd64)
 
-    Available on [GitHub](https://github.com/foxcpp/maddy/releases) or
+    Available on [GitHub](https://github.com/jmcarbo/maddy/releases) or
     [foxcpp.dev](https://foxcpp.dev/maddy-builds/).
 
     The tarball contains the full filesystem tree so you can directly

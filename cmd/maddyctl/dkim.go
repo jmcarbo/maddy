@@ -21,7 +21,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/foxcpp/maddy/internal/modify/dkim"
+	"github.com/jmcarbo/maddy/internal/modify/dkim"
 	"github.com/urfave/cli"
 )
 

@@ -24,9 +24,9 @@ import (
 	"testing"
 
 	"github.com/emersion/go-message/textproto"
-	"github.com/foxcpp/maddy/framework/buffer"
-	"github.com/foxcpp/maddy/framework/module"
-	"github.com/foxcpp/maddy/internal/testutils"
+	"github.com/jmcarbo/maddy/framework/buffer"
+	"github.com/jmcarbo/maddy/framework/module"
+	"github.com/jmcarbo/maddy/internal/testutils"
 )
 
 func TestMsgPipeline_AllToTarget(t *testing.T) {

@@ -25,12 +25,12 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/foxcpp/maddy"
-	parser "github.com/foxcpp/maddy/framework/cfgparser"
-	"github.com/foxcpp/maddy/framework/config"
-	"github.com/foxcpp/maddy/framework/hooks"
-	"github.com/foxcpp/maddy/framework/module"
-	"github.com/foxcpp/maddy/internal/updatepipe"
+	"github.com/jmcarbo/maddy"
+	parser "github.com/jmcarbo/maddy/framework/cfgparser"
+	"github.com/jmcarbo/maddy/framework/config"
+	"github.com/jmcarbo/maddy/framework/hooks"
+	"github.com/jmcarbo/maddy/framework/module"
+	"github.com/jmcarbo/maddy/internal/updatepipe"
 	"github.com/urfave/cli"
 	"golang.org/x/crypto/bcrypt"
 )

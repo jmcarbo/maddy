@@ -25,11 +25,11 @@ import (
 	specialuse "github.com/emersion/go-imap-specialuse"
 	"github.com/emersion/go-imap/backend"
 	"github.com/emersion/go-message/textproto"
-	imapsql "github.com/foxcpp/go-imap-sql"
-	"github.com/foxcpp/maddy/framework/buffer"
-	"github.com/foxcpp/maddy/framework/exterrors"
-	"github.com/foxcpp/maddy/framework/module"
-	"github.com/foxcpp/maddy/internal/target"
+	imapsql "github.com/jmcarbo/go-imap-sql"
+	"github.com/jmcarbo/maddy/framework/buffer"
+	"github.com/jmcarbo/maddy/framework/exterrors"
+	"github.com/jmcarbo/maddy/framework/module"
+	"github.com/jmcarbo/maddy/internal/target"
 )
 
 type delivery struct {

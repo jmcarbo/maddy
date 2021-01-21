@@ -31,12 +31,12 @@ import (
 	"github.com/emersion/go-sasl"
 	"github.com/emersion/go-smtp"
 	"github.com/foxcpp/go-mockdns"
-	"github.com/foxcpp/maddy/framework/config"
-	"github.com/foxcpp/maddy/framework/exterrors"
-	"github.com/foxcpp/maddy/framework/module"
-	"github.com/foxcpp/maddy/internal/auth"
-	"github.com/foxcpp/maddy/internal/msgpipeline"
-	"github.com/foxcpp/maddy/internal/testutils"
+	"github.com/jmcarbo/maddy/framework/config"
+	"github.com/jmcarbo/maddy/framework/exterrors"
+	"github.com/jmcarbo/maddy/framework/module"
+	"github.com/jmcarbo/maddy/internal/auth"
+	"github.com/jmcarbo/maddy/internal/msgpipeline"
+	"github.com/jmcarbo/maddy/internal/testutils"
 )
 
 var testPort string

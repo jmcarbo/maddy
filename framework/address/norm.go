@@ -22,7 +22,7 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"github.com/foxcpp/maddy/framework/dns"
+	"github.com/jmcarbo/maddy/framework/dns"
 	"golang.org/x/net/idna"
 	"golang.org/x/text/unicode/norm"
 )

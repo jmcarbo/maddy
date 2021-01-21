@@ -24,10 +24,10 @@ import (
 
 	"github.com/emersion/go-smtp"
 	"github.com/foxcpp/go-mockdns"
-	"github.com/foxcpp/maddy/framework/future"
-	"github.com/foxcpp/maddy/framework/module"
-	"github.com/foxcpp/maddy/internal/check"
-	"github.com/foxcpp/maddy/internal/testutils"
+	"github.com/jmcarbo/maddy/framework/future"
+	"github.com/jmcarbo/maddy/framework/module"
+	"github.com/jmcarbo/maddy/internal/check"
+	"github.com/jmcarbo/maddy/internal/testutils"
 )
 
 func TestRequireMatchingRDNS(t *testing.T) {

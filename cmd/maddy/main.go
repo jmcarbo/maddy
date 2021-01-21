@@ -21,7 +21,7 @@ package main
 import (
 	"os"
 
-	"github.com/foxcpp/maddy"
+	"github.com/jmcarbo/maddy"
 )
 
 func main() {

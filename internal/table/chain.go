@@ -19,9 +19,9 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 package table
 
 import (
-	"github.com/foxcpp/maddy/framework/config"
-	modconfig "github.com/foxcpp/maddy/framework/config/module"
-	"github.com/foxcpp/maddy/framework/module"
+	"github.com/jmcarbo/maddy/framework/config"
+	modconfig "github.com/jmcarbo/maddy/framework/config/module"
+	"github.com/jmcarbo/maddy/framework/module"
 )
 
 type Chain struct {

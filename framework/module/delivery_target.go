@@ -22,7 +22,7 @@ import (
 	"context"
 
 	"github.com/emersion/go-message/textproto"
-	"github.com/foxcpp/maddy/framework/buffer"
+	"github.com/jmcarbo/maddy/framework/buffer"
 )
 
 // DeliveryTarget interface represents abstract storage for the message data

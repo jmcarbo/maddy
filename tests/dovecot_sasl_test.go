@@ -36,7 +36,7 @@ import (
 	"syscall"
 	"testing"
 
-	"github.com/foxcpp/maddy/tests"
+	"github.com/jmcarbo/maddy/tests"
 )
 
 var DovecotExecutable string

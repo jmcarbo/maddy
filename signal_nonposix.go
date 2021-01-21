@@ -25,7 +25,7 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/foxcpp/maddy/framework/log"
+	"github.com/jmcarbo/maddy/framework/log"
 )
 
 func handleSignals() os.Signal {

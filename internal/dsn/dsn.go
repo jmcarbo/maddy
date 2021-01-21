@@ -31,8 +31,8 @@ import (
 
 	"github.com/emersion/go-message/textproto"
 	"github.com/emersion/go-smtp"
-	"github.com/foxcpp/maddy/framework/address"
-	"github.com/foxcpp/maddy/framework/dns"
+	"github.com/jmcarbo/maddy/framework/address"
+	"github.com/jmcarbo/maddy/framework/dns"
 )
 
 type ReportingMTAInfo struct {

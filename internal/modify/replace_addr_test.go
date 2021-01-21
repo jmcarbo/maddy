@@ -22,8 +22,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/foxcpp/maddy/framework/config"
-	"github.com/foxcpp/maddy/internal/testutils"
+	"github.com/jmcarbo/maddy/framework/config"
+	"github.com/jmcarbo/maddy/internal/testutils"
 )
 
 func testReplaceAddr(t *testing.T, modName string, rewriter func(*replaceAddr, context.Context, string) (string, error)) {

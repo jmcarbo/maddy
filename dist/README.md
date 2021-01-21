@@ -29,7 +29,7 @@ maddy running as a unprivilieged user.
 Configuration files for use with fail2ban. Assume either `backend = systemd` specified
 in system-wide configuration or log file written to /var/log/maddy/maddy.log.
 
-See https://github.com/foxcpp/maddy/wiki/fail2ban-configuration for details.
+See https://github.com/jmcarbo/maddy/wiki/fail2ban-configuration for details.
 
 ## logrotate configuration
 

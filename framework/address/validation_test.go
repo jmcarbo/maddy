@@ -3,7 +3,7 @@ package address_test
 import (
 	"testing"
 
-	"github.com/foxcpp/maddy/framework/address"
+	"github.com/jmcarbo/maddy/framework/address"
 )
 
 func TestValidMailboxName(t *testing.T) {

@@ -41,14 +41,14 @@ import (
 	"github.com/emersion/go-sasl"
 	i18nlevel "github.com/foxcpp/go-imap-i18nlevel"
 	namespace "github.com/foxcpp/go-imap-namespace"
-	"github.com/foxcpp/go-imap-sql/children"
-	"github.com/foxcpp/maddy/framework/config"
-	modconfig "github.com/foxcpp/maddy/framework/config/module"
-	tls2 "github.com/foxcpp/maddy/framework/config/tls"
-	"github.com/foxcpp/maddy/framework/log"
-	"github.com/foxcpp/maddy/framework/module"
-	"github.com/foxcpp/maddy/internal/auth"
-	"github.com/foxcpp/maddy/internal/updatepipe"
+	"github.com/jmcarbo/go-imap-sql/children"
+	"github.com/jmcarbo/maddy/framework/config"
+	modconfig "github.com/jmcarbo/maddy/framework/config/module"
+	tls2 "github.com/jmcarbo/maddy/framework/config/tls"
+	"github.com/jmcarbo/maddy/framework/log"
+	"github.com/jmcarbo/maddy/framework/module"
+	"github.com/jmcarbo/maddy/internal/auth"
+	"github.com/jmcarbo/maddy/internal/updatepipe"
 )
 
 type Endpoint struct {

@@ -23,8 +23,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/foxcpp/maddy/cmd/maddyctl/clitools"
-	"github.com/foxcpp/maddy/framework/module"
+	"github.com/jmcarbo/maddy/cmd/maddyctl/clitools"
+	"github.com/jmcarbo/maddy/framework/module"
 	"github.com/urfave/cli"
 )
 

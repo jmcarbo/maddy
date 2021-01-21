@@ -24,8 +24,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/foxcpp/maddy/framework/config"
-	"github.com/foxcpp/maddy/internal/testutils"
+	"github.com/jmcarbo/maddy/framework/config"
+	"github.com/jmcarbo/maddy/internal/testutils"
 )
 
 func TestSQL(t *testing.T) {

@@ -24,8 +24,8 @@ import (
 	"testing"
 	"time"
 
-	imapsql "github.com/foxcpp/go-imap-sql"
-	"github.com/foxcpp/maddy/internal/testutils"
+	imapsql "github.com/jmcarbo/go-imap-sql"
+	"github.com/jmcarbo/maddy/internal/testutils"
 )
 
 var (

@@ -25,7 +25,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/foxcpp/maddy/tests"
+	"github.com/jmcarbo/maddy/tests"
 )
 
 func floodSmtp(c *tests.Conn, commands []string, expectedPatterns []string, iterations int) {

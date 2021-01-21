@@ -22,12 +22,12 @@ import (
 	"net"
 	"strings"
 
-	"github.com/foxcpp/maddy/framework/address"
-	modconfig "github.com/foxcpp/maddy/framework/config/module"
-	"github.com/foxcpp/maddy/framework/dns"
-	"github.com/foxcpp/maddy/framework/exterrors"
-	"github.com/foxcpp/maddy/framework/module"
-	"github.com/foxcpp/maddy/internal/check"
+	"github.com/jmcarbo/maddy/framework/address"
+	modconfig "github.com/jmcarbo/maddy/framework/config/module"
+	"github.com/jmcarbo/maddy/framework/dns"
+	"github.com/jmcarbo/maddy/framework/exterrors"
+	"github.com/jmcarbo/maddy/framework/module"
+	"github.com/jmcarbo/maddy/internal/check"
 )
 
 func requireMatchingRDNS(ctx check.StatelessCheckContext) module.CheckResult {

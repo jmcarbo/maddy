@@ -21,8 +21,8 @@ package tls
 import (
 	"crypto/tls"
 
-	"github.com/foxcpp/maddy/framework/config"
-	"github.com/foxcpp/maddy/framework/log"
+	"github.com/jmcarbo/maddy/framework/config"
+	"github.com/jmcarbo/maddy/framework/log"
 )
 
 var strVersionsMap = map[string]uint16{

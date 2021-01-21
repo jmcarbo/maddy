@@ -24,8 +24,8 @@ import (
 	"os"
 
 	specialuse "github.com/emersion/go-imap-specialuse"
-	"github.com/foxcpp/maddy/cmd/maddyctl/clitools"
-	"github.com/foxcpp/maddy/framework/module"
+	"github.com/jmcarbo/maddy/cmd/maddyctl/clitools"
+	"github.com/jmcarbo/maddy/framework/module"
 	"github.com/urfave/cli"
 )
 

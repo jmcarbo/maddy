@@ -22,9 +22,9 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/foxcpp/maddy/framework/module"
-	"github.com/foxcpp/maddy/internal/modify"
-	"github.com/foxcpp/maddy/internal/testutils"
+	"github.com/jmcarbo/maddy/framework/module"
+	"github.com/jmcarbo/maddy/internal/modify"
+	"github.com/jmcarbo/maddy/internal/testutils"
 )
 
 type multipleErrs map[string]error

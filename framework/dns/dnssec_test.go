@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/foxcpp/maddy/framework/log"
+	"github.com/jmcarbo/maddy/framework/log"
 	"github.com/miekg/dns"
 )
 

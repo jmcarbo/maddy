@@ -26,7 +26,7 @@ import (
 	"os"
 
 	"github.com/emersion/go-imap/backend"
-	"github.com/foxcpp/maddy/framework/log"
+	"github.com/jmcarbo/maddy/framework/log"
 )
 
 // UnixSockPipe implements the UpdatePipe interface by serializating updates

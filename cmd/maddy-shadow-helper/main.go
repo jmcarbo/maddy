@@ -23,7 +23,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/foxcpp/maddy/internal/auth/shadow"
+	"github.com/jmcarbo/maddy/internal/auth/shadow"
 )
 
 func main() {

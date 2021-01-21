@@ -22,9 +22,9 @@ import (
 	"testing"
 
 	"github.com/emersion/go-smtp"
-	"github.com/foxcpp/maddy/framework/config"
-	"github.com/foxcpp/maddy/framework/module"
-	"github.com/foxcpp/maddy/internal/testutils"
+	"github.com/jmcarbo/maddy/framework/config"
+	"github.com/jmcarbo/maddy/framework/module"
+	"github.com/jmcarbo/maddy/internal/testutils"
 )
 
 func testSaslFactory(t *testing.T, args ...string) saslClientFactory {

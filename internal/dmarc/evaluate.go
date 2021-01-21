@@ -29,8 +29,8 @@ import (
 	"github.com/emersion/go-message/textproto"
 	"github.com/emersion/go-msgauth/authres"
 	"github.com/emersion/go-msgauth/dmarc"
-	"github.com/foxcpp/maddy/framework/address"
-	"github.com/foxcpp/maddy/framework/dns"
+	"github.com/jmcarbo/maddy/framework/address"
+	"github.com/jmcarbo/maddy/framework/dns"
 	"golang.org/x/net/publicsuffix"
 )
 

@@ -39,7 +39,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/foxcpp/maddy"
+	"github.com/jmcarbo/maddy"
 )
 
 func TestMain(m *testing.M) {

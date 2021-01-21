@@ -25,8 +25,8 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/foxcpp/maddy/framework/hooks"
-	"github.com/foxcpp/maddy/framework/log"
+	"github.com/jmcarbo/maddy/framework/hooks"
+	"github.com/jmcarbo/maddy/framework/log"
 )
 
 // handleSignals function creates and listens on OS signals channel.

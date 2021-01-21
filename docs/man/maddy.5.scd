@@ -213,7 +213,7 @@ This does not include the main configuration, though.
 Maintained by Max Mazurov <fox.cpp@disroot.org>. Project includes contributions
 made by other people.
 
-Source code is available at https://github.com/foxcpp/maddy.
+Source code is available at https://github.com/jmcarbo/maddy.
 
 # See also
 

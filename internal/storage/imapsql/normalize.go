@@ -22,8 +22,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/foxcpp/maddy/framework/address"
-	"github.com/foxcpp/maddy/framework/dns"
+	"github.com/jmcarbo/maddy/framework/address"
+	"github.com/jmcarbo/maddy/framework/dns"
 	"golang.org/x/text/secure/precis"
 )
 

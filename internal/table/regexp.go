@@ -23,8 +23,8 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/foxcpp/maddy/framework/config"
-	"github.com/foxcpp/maddy/framework/module"
+	"github.com/jmcarbo/maddy/framework/config"
+	"github.com/jmcarbo/maddy/framework/module"
 )
 
 type Regexp struct {

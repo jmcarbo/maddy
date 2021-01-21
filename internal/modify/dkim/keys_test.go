@@ -28,7 +28,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/foxcpp/maddy/internal/testutils"
+	"github.com/jmcarbo/maddy/internal/testutils"
 )
 
 func TestKeyLoad_new(t *testing.T) {

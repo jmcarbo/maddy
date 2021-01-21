@@ -29,7 +29,7 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/foxcpp/maddy/framework/log"
+	"github.com/jmcarbo/maddy/framework/log"
 )
 
 type SDStatus string

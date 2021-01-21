@@ -23,7 +23,7 @@ import (
 	"fmt"
 
 	appendlimit "github.com/emersion/go-imap-appendlimit"
-	"github.com/foxcpp/maddy/framework/module"
+	"github.com/jmcarbo/maddy/framework/module"
 	"github.com/urfave/cli"
 )
 

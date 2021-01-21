@@ -24,8 +24,8 @@ import (
 	"fmt"
 	"io/ioutil"
 
-	"github.com/foxcpp/maddy/framework/config"
-	"github.com/foxcpp/maddy/framework/log"
+	"github.com/jmcarbo/maddy/framework/config"
+	"github.com/jmcarbo/maddy/framework/log"
 )
 
 func TLSClientBlock(m *config.Map, node config.Node) (interface{}, error) {
