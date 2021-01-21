@@ -133,7 +133,7 @@ func (s *SQL) Close() error {
 
 func (s *SQL) Lookup(val string) (string, bool, error) {
 	var repl string
-	row := s.lookup.QueryRow(val)
+  row := s.lookup.QueryRow(map[string]interface{}{ "key": val })
 	if err := row.Scan(&repl); err != nil {
 	  return "", false, nil
     /*
