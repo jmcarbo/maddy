@@ -19,7 +19,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 package table
 
 import (
-	"database/sql"
+	//"database/sql"
+  sql "github.com/jmoiron/sqlx"
 	"fmt"
 	"strings"
 
@@ -168,7 +169,7 @@ func (s *SQL) RemoveKey(k string) error {
 		return fmt.Errorf("%s: table is not mutable (no 'del' query)", s.modName)
 	}
 
-	_, err := s.del.Exec(sql.Named("key", k))
+	_, err := s.del.NamedExec(sql.Named("key", k))
 	if err != nil {
 		return fmt.Errorf("%s: del %s: %w", s.modName, k, err)
 	}
@@ -183,8 +184,8 @@ func (s *SQL) SetKey(k, v string) error {
 		return fmt.Errorf("%s: table is not mutable (no 'add' query)", s.modName)
 	}
 
-	if _, err := s.add.Exec(sql.Named("key", k), sql.Named("value", v)); err != nil {
-		if _, err := s.set.Exec(sql.Named("key", k), sql.Named("value", v)); err != nil {
+	if _, err := s.add.NamedExec(sql.Named("key", k), sql.Named("value", v)); err != nil {
+		if _, err := s.set.NamedExec(sql.Named("key", k), sql.Named("value", v)); err != nil {
 			return fmt.Errorf("%s: add %s: %w", s.modName, k, err)
 		}
 		return nil

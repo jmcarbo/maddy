@@ -1,12 +1,11 @@
-{{ if ne .Values.deployment.type "DaemonSet" }}
+{{ if eq .Values.deployment.type "DaemonSet" }}
 apiVersion: apps/v1
-kind: Deployment
+kind: DaemonSet
 metadata:
   name: {{ include "maddy.fullname" . }}
   labels:
     {{- include "maddy.labels" . | nindent 4 }}
 spec:
-  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
       {{- include "maddy.selectorLabels" . | nindent 6 }}

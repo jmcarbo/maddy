@@ -5,6 +5,8 @@ metadata:
   labels: {{- include "maddy.labels" . | nindent 4}}
 data:
   maddy.conf: |
-{{ tpl (.Files.Get "files/maddy.conf") . | printf "%s" | indent 4 }}
+{{ .Values.config | indent 4 }}
   aliases: |
-{{ tpl (.Files.Get "files/aliases") . | printf "%s" | indent 4 }}
+{{ .Values.aliases | indent 4 }}
+  users: |
+{{ .Values.users | indent 4 }}
