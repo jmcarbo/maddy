@@ -43,3 +43,6 @@ require (
 	golang.org/x/text v0.3.5-0.20201125200606-c27b9fd57aec
 	google.golang.org/protobuf v1.25.0 // indirect
 )
+
+replace github.com/foxcpp/go-imap-sql v0.4.1-0.20200823124337-2f57903a7ed0 => github.com/jmcarbo/go-imap-sql v0.4.8
+
